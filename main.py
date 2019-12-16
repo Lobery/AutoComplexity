@@ -58,6 +58,8 @@ def get_function_complexity(root, input_file = 'Func_changed.txt', output_file =
         if folder != current_folder and current_folder:
             complexity = get_complexity_with_SM(root + current_folder, files, methods)
             for i in range(len(files)):
+                if complexity[i] < filter:
+                    continue
                 files[i] = os.path.join(current_folder, files[i])
                 output_lines.append(files[i] + ',' + methods[i] + ',' + str(complexity[i]) + '\n')
             files = []
@@ -72,7 +74,7 @@ def get_function_complexity(root, input_file = 'Func_changed.txt', output_file =
         complexity = get_complexity_with_SM(os.path.join(root, current_folder), files, methods)
 
     for i in range(len(files)):
-        if complixity[i] < filter:
+        if complexity[i] < filter:
             continue
         files[i] = os.path.join(current_folder, files[i])
         output_lines.append(files[i] + ',' + methods[i] + ',' + str(complexity[i]) + '\n')
