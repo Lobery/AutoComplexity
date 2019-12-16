@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sourcemonitor_commands>
+    <write_log>true</write_log>
+     <command>
+        <project_file>autostat.smp</project_file>
+        <project_language>C++</project_language>
+        <modified_complexity>false</modified_complexity>
+	<ignore_blank_lines>false</ignore_blank_lines>
+        <source_directory>C:\Source\media\media_embargo\media_driver_next\ult\agnostic\test\gen12\codec\enc\hevc\pipeline\focus_test\</source_directory>
+        <parse_utf8_files>True</parse_utf8_files>
+        <checkpoint_name>Baseline</checkpoint_name>
+        <checkpoint_date>1999-08-31T12:24:56</checkpoint_date>
+	<show_measured_max_block_depth>True</show_measured_max_block_depth>
+        <file_extensions>*.h,*.cpp,*.c</file_extensions>
+        <include_subdirectories>true</include_subdirectories>
+        <ignore_headers_footers>2 DOC only</ignore_headers_footers>
+        <ignore_headers_footers>True</ignore_headers_footers>
+
+        <export>
+            <export_file>methods_detail.csv</export_file>
+            <export_type>6 (project details as CSV)</export_type>
+        </export>
+    </command>
+</sourcemonitor_commands>

@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\SourceMonitor\SourceMonitor.exe" /C "config.xml"

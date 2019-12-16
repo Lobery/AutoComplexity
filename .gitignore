@@ -1,0 +1,10 @@
+##ignore these files##
+/build/
+/dist/
+/.vs/
+autostat.smp
+commit.diff
+Func_changed.txt
+methods_detail.csv
+output.csv
+/__pycache__/
