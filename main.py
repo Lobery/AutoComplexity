@@ -35,7 +35,7 @@ def get_complexity_with_SM(path, files, methods):
                 find = True
                 break
         if not find:
-            complexity.append('')
+            complexity.append(0)
     return complexity
         
 
@@ -58,12 +58,14 @@ def get_function_complexity(root, input_file = 'Func_changed.txt', output_file =
         if folder != current_folder and current_folder:
             complexity = get_complexity_with_SM(root + current_folder, files, methods)
             for i in range(len(files)):
+                if complexity[i] == 0:
+                    print('WARNING: Method:' + methods[i] + ' in ' + files[i] + ' not found!')
                 if complexity[i] < filter:
                     continue
                 files[i] = os.path.join(current_folder, files[i])
                 output_lines.append(files[i] + ',' + methods[i] + ',' + str(complexity[i]) + '\n')
-            files = []
-            methods = []
+            files = [file]
+            methods = [method]
             current_folder = folder
             print('Finishing analysing files in folder ' + current_folder)
         else:
@@ -71,7 +73,7 @@ def get_function_complexity(root, input_file = 'Func_changed.txt', output_file =
             files.append(file)
             methods.append(method)
     if current_folder:
-        complexity = get_complexity_with_SM(os.path.join(root, current_folder), files, methods)
+        complexity = get_complexity_with_SM(root + current_folder, files, methods)
 
     for i in range(len(files)):
         if complexity[i] < filter:
@@ -84,5 +86,9 @@ def get_function_complexity(root, input_file = 'Func_changed.txt', output_file =
     print('Generate ' + output_file + ' success!')
                 
 root = get_root()
+if os.path.exists('commit.diff'):
+    os.remove('commit.diff')
+if os.path.exists('Func_changed.txt'):
+    os.remove('Func_changed.txt')
 read_diff.test(input_driver_path = root)
 get_function_complexity(root)
