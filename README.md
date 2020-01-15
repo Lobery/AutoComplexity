@@ -9,4 +9,4 @@
 
 5.Important dump files include:1)Func_changed.txt(Include all functions modified in current version against last version); 2)method_detail.csv(Include all functions complexity information scanned by SourceMonitor); 3)output.csv(Include functions in Func_changed.txt whose complexity >= filter in Query.xml).
 
-6.Files need to be create if using pyinstaller to generate exe: config.xml, test.bat, Query.xml.
+6.Files need to be create if using pyinstaller to generate exe: config.xml, test.bat, Query.xml.(Put them in same folder as exe)
