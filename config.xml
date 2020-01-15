@@ -6,7 +6,7 @@
         <project_language>C++</project_language>
         <modified_complexity>false</modified_complexity>
 	<ignore_blank_lines>false</ignore_blank_lines>
-        <source_directory>C:\Users\lingsun\gfx\gfx-driver\Source\media\media_embargo\agnostic\gen12_dg2\hw\vdbox\</source_directory>
+        <source_directory>C:\Users\lingsun\gfx\gfx-driver\Source\media\media_driver\agnostic\common\cm\</source_directory>
         <parse_utf8_files>True</parse_utf8_files>
         <checkpoint_name>Baseline</checkpoint_name>
         <checkpoint_date>1999-08-31T12:24:56</checkpoint_date>

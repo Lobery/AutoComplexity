@@ -66,8 +66,8 @@ def get_function_complexity(root, input_file = 'Func_changed.txt', output_file =
                 output_lines.append(files[i] + ',' + methods[i] + ',' + str(complexity[i]) + '\n')
             files = [file]
             methods = [method]
-            current_folder = folder
             print('Finishing analysing files in folder ' + current_folder)
+            current_folder = folder
         else:
             current_folder = folder
             files.append(file)
